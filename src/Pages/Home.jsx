@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const HomePage = () => {
   return (
     <div className="container  ">
-      <h3 className="mb-4"> Home Page - Location de voitures</h3>
+      <h3 className="mb-4"> Home Page</h3>
       
       <div className="d-flex justify-content-center flex-wrap">
         <div className="card bg-dark text-white p-5 m-3" style={{ minWidth: "250px" }}>

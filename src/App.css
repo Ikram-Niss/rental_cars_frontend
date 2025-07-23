@@ -1,42 +1,55 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* navbar */
+.navbar-custom {
+  background-color: #dfc894; 
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+  color: rgb(252, 238, 197);
+  transition: color 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #482504; 
+}
+
+.navbar-custom .nav-link.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+ 
+/* Home */
+.home-page {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.custom-card {
+  min-width: 250px;
+  background-color: #212529; 
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.custom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.custom-link {
+  color: rgb(252, 238, 197);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.custom-link:hover {
+  color: #482504; 
 }
 
-.card {
-  padding: 2em;
-}
 
-.read-the-docs {
-  color: #888;
-}
+
+

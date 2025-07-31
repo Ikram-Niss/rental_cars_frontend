@@ -1,55 +1,134 @@
-/* navbar */
-.navbar-custom {
-  background-color: #dfc894; 
+:root {
+  --main-blue: #007BFF;
+  --light-blue: #E3F2FD;
+  --red: #a47b2e;
+  --white: #fff;
+  --shadow: rgba(0, 0, 0, 0.1);
 }
 
-.navbar-custom .navbar-brand,
-.navbar-custom .nav-link {
-  color: rgb(252, 238, 197);
-  transition: color 0.3s ease;
+body {
+  background-color: #f7f9fc;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.navbar-custom .nav-link:hover {
-  color: #482504; 
+.cars-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
 }
 
-.navbar-custom .nav-link.active {
-  font-weight: bold;
-  text-decoration: underline;
-}
-
- 
-/* Home */
-.home-page {
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
-.custom-card {
-  min-width: 250px;
-  background-color: #212529; 
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+.title {
+  color: var(--main-blue);
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 2rem;
 }
 
-.custom-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+.add-btn-container {
+  text-align: right;
+  margin-bottom: 20px;
 }
 
-.custom-link {
-  color: rgb(252, 238, 197);
+.add-car-btn {
+  background-color: var(--main-blue);
+  color: var(--white);
+  padding: 10px 20px;
   text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease;
   font-weight: bold;
-  font-size: 1.2rem;
 }
 
-.custom-link:hover {
-  color: #482504; 
+.add-car-btn:hover {
+  background-color: #0056b3;
+}
+
+.cars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.car-card {
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px var(--shadow);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.car-card:hover {
+  transform: translateY(-5px);
+}
+
+.car-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.car-info {
+  padding: 1rem;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s ease;
+  text-decoration: none;
+  color: var(--white);
+}
+
+.btn.blue {
+  background-color: var(--main-blue);
+}
+
+.btn.blue:hover {
+  background-color: #0056b3;
+}
+
+.btn.red {
+  background-color: var(--red);
+}
+
+.btn.red:hover {
+  background-color: #a17b23;
 }
 
 
 
+.background-wrapper {
+  position: relative;
+  background: linear-gradient(135deg, #3a8dde, #8e44ad);
+  overflow: hidden;
+}
 
+.background-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: linear-gradient(135deg, #3a8dde, #8e44ad);
+  /* ألوان الأزرق البنفسجي المتدرج */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
